@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="./css/deepMenufix.css">
+</head>
+
+<body>
+<div id="navwrap">
+	<div class="navadder">
+		<ul>
+			<li class="navitem"><a href="#book" class="active">读书</a></li>
+			<li class="navitem"><a href="#movie">电影</a></li>
+			<li class="navitem"><a href="#music">音乐</a></li>
+			<li class="navitem"><a href="#city">同城</a></li>
+			<li class="navitem"><a href="#group">小组</a></li>
+			<li class="navitem"><a href="#read">阅读</a></li>
+			<li class="navitem"><a href="#shop">东西</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- 以下为演示内容 -->
+
+<div class="show" id="book">Book</div>
+<div class="show" id="movie">Movie</div>
+<div class="show" id="music">Music</div>
+<div class="show" id="city">City</div>
+<div class="show" id="group">Group</div>
+<div class="show" id="read">Read</div>
+<div class="show" id="shop">Shop</div>
+
+<!--[if lte IE 8]>
+    <script src="../deep-ie8.js"></script>
+<![endif]-->
+
+<script src="./js/deepMenufix.js"></script>
+<script>
+	window.onload = function () {
+		var navWrap = document.getElementById('navwrap');
+		var navItem = navWrap.querySelectorAll('.navitem');
+		menufix({
+			navWrap : navWrap,
+			navItem : navItem
+		});
+	};
+</script>
+
+    
+</body>
+</html>
